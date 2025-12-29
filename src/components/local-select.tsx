@@ -15,7 +15,7 @@ export default function LocalSelect() {
       onClick={toggleLanguage}
       variant="outline"
       size="sm"
-      className="gap-2"
+      className="gap-2 h-9"
     >
       <Languages className="size-4" />
       {i18n.language.toUpperCase()}
