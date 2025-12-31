@@ -3,14 +3,18 @@ import CreateGame from "@/pages/CreateGame";
 import Home from "@/pages/Home";
 import NotFound from "@/pages/NotFound";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import JoinGame from "./pages/JoinGame";
+import StyleGuide from "./pages/StyleGuide";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreateGame />} />
+          <Route path="/join" element={<JoinGame />} />
+          <Route path="/style-guide" element={<StyleGuide />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
