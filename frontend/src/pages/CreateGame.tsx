@@ -12,7 +12,7 @@ type ColorChoice = "white" | "black" | "random" | null;
 
 export default function CreatePage() {
   const { t } = useTranslation();
-  const [playerName, setPlayerName] = useState("");
+  const [playerName] = useState("");
   const [selectedColor, setSelectedColor] = useState<ColorChoice>("random");
 
   const handleCreateGame = () => {
