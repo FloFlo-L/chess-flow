@@ -10,11 +10,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow-xs transition-all [box-shadow:0px_4px_0px_var(--primary-shadow)] active:translate-y-[2px] active:shadow-none hover:[box-shadow:0px_2px_0px_var(--primary-shadow)] hover:translate-y-[1px] border border-(--primary-shadow)",
+          "bg-primary text-primary-foreground shadow-xs transition-all [box-shadow:0px_4px_0px_var(--primary-shadow)] active:translate-y-[2px] active:shadow-none border border-(--primary-shadow)",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
-          "border bg-background shadow-xs hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 [box-shadow:0px_4px_0px_var(--border)] active:translate-y-[2px] active:shadow-none hover:[box-shadow:0px_2px_0px_var(--border)] hover:translate-y-[1px]",
+          "border bg-background shadow-xs hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 [box-shadow:0px_4px_0px_var(--border)] active:translate-y-[2px] active:shadow-none",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost:
@@ -22,9 +22,9 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
+        default: "h-9 px-4 py-2 has-[>svg]:px-3 px-5 py-5",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        lg: "h-10 rounded-md px-6 has-[>svg]:px-4 px-8 py-6 text-lg",
         icon: "size-9",
         "icon-sm": "size-8",
         "icon-lg": "size-10",

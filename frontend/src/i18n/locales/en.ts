@@ -21,6 +21,22 @@ export default {
     },
   },
   createGame: {
-    title: "Create Game page",
+    title: "Create Game",
+    subtitle: "Set up a new game and invite your friends",
+    joinLink: "Join an existing game →",
+    yourName: "Your Name",
+    roomName: "Room Name",
+    roomCode: "Room Code",
+    roomCodePlaceholder: "Auto-generated",
+    iPlayAs: "I play as",
+    buttonCreate: "Create Game",
+  },
+  joinGame: {
+    title: "Join Game",
+    subtitle: "Enter the room code to join your friend's game",
+    createLink: "Create a new game →",
+    yourName: "Your Name",
+    roomCode: "Room Code",
+    buttonJoin: "Join Game",
   },
 };

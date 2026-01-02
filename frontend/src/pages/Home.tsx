@@ -1,8 +1,8 @@
-import LocalSelect from "@/components/local-select";
-import { ModeToggle } from "@/components/mode-toggle";
+import SimpleHeader from "@/components/simple-header";
 import { AuroraIcon } from "@/components/ui/aurora-icon";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { ChessQueen, Link, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
@@ -13,12 +13,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-primary-foreground dark:bg-background">
-      <div className="sticky top-0 z-10 w-full border-b md:border-none bg-primary-foreground dark:bg-background">
-        <div className="max-w-4xl mx-auto h-16 flex items-center justify-between px-4">
-          <ModeToggle />
-          <LocalSelect />
-        </div>
-      </div>
+      <SimpleHeader />
       <div className="min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center pt-16 md:pt-0">
           <h1 className="text-6xl font-bold mb-4 text-primary">
@@ -32,7 +27,8 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-5 justify-center items-center">
             <Button
               onClick={() => navigate("/create")}
-              className="text-lg px-8 py-6 shadow-lg w-60"
+              size="lg"
+              className="w-60"
             >
               {t("home.createGame")}
             </Button>
@@ -40,14 +36,15 @@ export default function Home() {
             <Button
               onClick={() => navigate("/join")}
               variant="outline"
-              className="text-lg px-8 py-6 w-60"
+              size="lg"
+              className="w-60"
             >
               {t("home.joinGame")}
             </Button>
           </div>
 
           <div className="my-16 grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-            <div className="bg-card text-card-foreground p-6 rounded-lg [box-shadow:0px_4px_0px_var(--border)] flex flex-col items-center gap-3">
+            <Card className="items-center p-6 gap-3">
               <AuroraIcon
                 icon={ChessQueen}
                 className="size-10"
@@ -56,30 +53,30 @@ export default function Home() {
               <h3 className="font-semibold text-xl">
                 {t("home.steps.create.title")}
               </h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground text-center">
                 {t("home.steps.create.description")}
               </p>
-            </div>
+            </Card>
 
-            <div className="bg-card text-card-foreground p-6 rounded-lg [box-shadow:0px_4px_0px_var(--border)] flex flex-col items-center gap-3">
+            <Card className="items-center p-6 gap-3">
               <AuroraIcon icon={Link} className="size-10" strokeWidth={1.7} />
               <h3 className="font-semibold text-xl">
                 {t("home.steps.share.title")}
               </h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground text-center">
                 {t("home.steps.share.description")}
               </p>
-            </div>
+            </Card>
 
-            <div className="bg-card text-card-foreground p-6 rounded-lg [box-shadow:0px_4px_0px_var(--border)] flex flex-col items-center gap-3">
+            <Card className="items-center p-6 gap-3">
               <AuroraIcon icon={Zap} className="size-10" strokeWidth={1.7} />
               <h3 className="font-semibold text-xl">
                 {t("home.steps.play.title")}
               </h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground text-center">
                 {t("home.steps.play.description")}
               </p>
-            </div>
+            </Card>
           </div>
         </div>
       </div>
